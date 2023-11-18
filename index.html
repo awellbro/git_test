@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src = "javascript.js"></script>
   <meta charset="UTF-8">
   <title>Page Title</title>
 </head>
 <body>
-  <script>
-    
-    let a = 10;
-    alert(a * 8);
-
-  </script>
+  <button>Start Machine</button>
+  <p>The Machine is stopped</p>
 </body>
+<script>
+  const btn = document.querySelector("button");
+const txt = document.querySelector("p");
+
+btn.addEventListener("click", updateBtn);
+
+function updateBtn() {
+    if (btn.textContent === "Start Machine"){
+        btn.textContent = "Stop machine";
+        txt.textContent = "The machine has started!";
+    } else {
+        btn.textContent = "Start Machine";
+        txt.textContent = "The machine is stopped";
+    }
+}
+</script>
 </html>
