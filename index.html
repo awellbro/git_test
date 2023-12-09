@@ -5,63 +5,40 @@
   <meta charset="UTF-8">
   <title>Page Title</title>
 </head>
+
+
+
 <body>
 
-<button>Click Here</button>
-<div class = "response"></div>
+<div id = "txt"></div>
 
-
-  <!--ex. 1
-  <button>Start Machine</button>
-  <p>The Machine is stopped</p>
-  -->
-
-<!--ex 2-->
-  <!--<button>Press Me</button>
-<div id = "greeting"></div>
--->
 </body>
 
 
 
 <script>
 
-const button = document.querySelector("button");
-
-function respond(){
-let name = prompt("What's your name?");
-const response = document.querySelector(".response");
-response.textContent = `Hello ${name}, nice penis`;
+lastLetter = str => {
+  return str[(str.length)-1]
 }
 
-button.addEventListener("click", respond)
-
-// ex. 1
-/*const btn = document.querySelector("button");
-const txt = document.querySelector("p");
-
-btn.addEventListener("click", updateBtn);
-
-function updateBtn() {
-    if (btn.textContent === "Start Machine"){
-        btn.textContent = "Stop machine";
-        txt.textContent = "The machine has started!";
-    } else {
-        btn.textContent = "Start Machine";
-        txt.textContent = "The machine is stopped";
-    }
-}*/
-//ex 2
-/*
-const button = document.querySelector("button");
-
-function greet() {
-  const name = prompt("What is your name?");
-  const greeting = document.querySelector("#greeting");
-  greeting.textContent = `Hello ${name}, nice to see you!`;
+capitalize = x => {
+  let newx = x.toLowerCase();
+  let result = newx.replace(newx[0], newx[0].toUpperCase());
+  return result;
 }
 
-button.addEventListener("click", greet)
-*/
+function multiply(a, b) {
+  return a * b;
+}
+
+console.log(lastLetter("abcd"))
+console.log(capitalize("heLLo"))
+console.log(multiply(5, 11));
+
+
+//document.write(lastLetter("abcd"))
 </script>
+
+
 </html>
