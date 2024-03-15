@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src = "javascript.js"></script>
+  <script src = "javascript.js" defer></script>
+  <link rel = "stylesheet" href = "stylesheet.css"/>
   <meta charset="UTF-8">
   <title>Page Title</title>
 </head>
@@ -10,56 +11,28 @@
 
 <body>
 
-<div id = "txt"></div>
+  <form>
+    <label for = "objName">Object Name:</label>
+    <input type = "text" id = "objName">
+    <label for = "drinkName">Drink Name:</label>
+    <input type = "text" id = "drinkName">
+    <label for = "drinkIngred">Drink Ingredients:</label>
+    <input type = "text" id = "drinkIngred">
+    <label for = "drinkProcess">Drink Process:</label>
+    <input type = "text" id = "drinkProcess">
+    <button onclick = "getUserInput()">Submit</button>
+    </form>
+
 
 </body>
 
 
 
-<script>
-/*
-lastLetter = str => {
-  return str[(str.length)-1]
-}
-
-capitalize = x => {
-  let newx = x.toLowerCase();
-  let result = newx.replace(newx[0], newx[0].toUpperCase());
-  return result;
-}
-
-function multiply(a, b) {
-  return a * b;
-}
-
-console.log(lastLetter("abcd"))
-console.log(capitalize("heLLo"))
-console.log(multiply(5, 11));
 
 
-//document.write(lastLetter("abcd"))
-*/
-function newFunc() {
-let num = prompt("Enter a number, bitch")
-
-for(let i = 1; i <= num; i++){
-  if(!(i%3)&&!(i%5)){
-    console.log("FizzBuzz");
-  }
-  else if(!(i%3)){
-    console.log("Fizz");
-  }
-  else if(!(i%5)){
-    console.log("Buzz");
-  }
-  else {console.log(i)};
-}
-
-
-};
-
-newFunc();
-</script>
-
-
+<!--
+<div id = "txt"></div>
+<button>Click Me</button>
+</body>>
+-->
 </html>
